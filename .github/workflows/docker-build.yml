@@ -2,7 +2,7 @@
 
 name: Docker Build and Push
  
- 
+
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
@@ -20,6 +20,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v2.6.1
+
       -
         name: Checkout
         uses: actions/checkout@v2
